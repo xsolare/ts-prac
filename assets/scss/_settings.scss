@@ -1,14 +1,12 @@
-/*
- * src/assets/scss/settings.scss
- * Configures SASS variables and Vuetify overwrites
- */
-
 @use 'vuetify/settings' with (
   $body-font-family: (
-    'Gerbera',
+    Inter,
     'Open Sans',
     Roboto,
     -apple-system,
     sans-serif
+  ),
+  $rounded: (
+    'lg': 12px
   )
 );

@@ -204,7 +204,9 @@ $break: 400px;
 
 h1 {
   font-weight: 800;
-  color: var(--color-primary);
+  @include connectThemes($themes) using ($theme, $themeName) {
+    color: #{map-get($theme, 'colors', 'primary')};
+  }
   text-align: center;
   font-size: 2.5em;
   padding-top: 20px;

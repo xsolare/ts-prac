@@ -31,7 +31,7 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
-            @import "./assets/scss/variables.scss";
+            @import "./assets/scss/setup.scss";
           `
         }
       }
@@ -53,6 +53,7 @@ export default defineNuxtConfig({
   },
 
   colorMode: {
+    dataValue: 'theme',
     preference: 'light', // default value of $colorMode.preference
     fallback: 'light', // fallback value if not system preference found
     hid: 'nuxt-color-mode-script',

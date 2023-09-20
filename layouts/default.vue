@@ -19,7 +19,7 @@ const items = ref<IValue[]>([
   }
 ]);
 
-const icons = [{ icon: 'mdi-gitlab', link: 'https://github.com/xsolare' }];
+const icons = [{ icon: 'mdi-github', link: 'https://github.com/xsolare' }];
 
 nuxtApp.hook('page:start', () => {
   loading.value = true;
@@ -32,7 +32,7 @@ nuxtApp.hook('page:finish', () => {
 <template>
   <v-app-bar color="primary" prominent>
     <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer" />
-    <v-toolbar-title> xSolare guide</v-toolbar-title>
+    <v-toolbar-title> xSolare ts</v-toolbar-title>
     <v-spacer />
 
     <v-btn variant="text" icon="mdi-theme-light-dark" @click="switchTheme" />
@@ -67,13 +67,15 @@ nuxtApp.hook('page:finish', () => {
 </template>
 
 <style lang="scss">
-nav {
-  background-color: var(--bg-side-panel) !important;
-}
+@include connectThemes($themes) using ($theme, $themeName) {
+  nav {
+    background-color: #{map-get($theme, 'colors', 'bg-side-panel')} !important;
+  }
 
-.footer {
-  background-color: var(--bg-side-panel) !important;
-  display: flex;
-  flex-direction: column;
+  .footer {
+    background-color: #{map-get($theme, 'colors', 'bg-side-panel')} !important;
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

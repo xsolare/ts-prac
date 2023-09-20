@@ -6,6 +6,7 @@ import UiSnackbar from '#/components/common/snackbar/ui-snackbar.vue';
 
 const colorMode = useColorMode();
 const app = useAppConfig() as AppConfigInput;
+
 useHead({
   title: app.name as string,
   htmlAttrs: { lang: 'ru' },
@@ -26,9 +27,7 @@ useHead({
   <v-app>
     <v-theme-provider :theme="colorMode.preference">
       <ClientOnly>
-        <NuxtLayout>
-          <NuxtPage />
-        </NuxtLayout>
+        <NuxtPage />
         <v-no-ssr>
           <ui-snackbar />
           <ui-modal />
@@ -39,46 +38,50 @@ useHead({
 </template>
 
 <style lang="scss">
-.v-card-item__content {
-  overflow: visible;
-}
-
-.v-application {
-  min-height: 100vh;
-  background-color: var(--bg-primary);
-
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 100%;
-    background-color: #dbdbdb;
+@include connectThemes($themes) using ($theme, $themeName) {
+  .v-card-item__content {
+    overflow: visible;
   }
 
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #a9a9bb;
-    box-shadow: inset 0 0 5px #a9a9bb;
+  .v-application {
+    padding-top: 64px;
+    min-height: 100vh;
+
+    background-color: #{map-get($theme, 'colors', 'bg-primary')};
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 100%;
+      background-color: #dbdbdb;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: #a9a9bb;
+      box-shadow: inset 0 0 5px #a9a9bb;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
   }
 
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-}
+  .v-navigation-drawer {
+    ::-webkit-scrollbar {
+      width: 4px;
+      height: 100%;
+      background-color: #{map-get($theme, 'colors', 'bg-primary')};
+    }
 
-.v-navigation-drawer {
-  ::-webkit-scrollbar {
-    width: 4px;
-    height: 100%;
-    background-color: var(--bg-secondary);
-  }
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: #625e7e;
+      box-shadow: inset 0 0 5px #625e7e;
+    }
 
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #625e7e;
-    box-shadow: inset 0 0 5px #625e7e;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
   }
 }
 </style>

@@ -1,0 +1,37 @@
+@mixin connectThemes($themes, $wrapped: true) {
+  @each $themeName, $theme in $themes {
+    html[data-theme='#{$themeName}'] {
+      @content ($theme, $themeName);
+    }
+  }
+}
+
+@mixin connectThemeColors($themes) {
+  @each $themeName, $theme in $themes {
+    @each $colorType, $color in map-get($theme, 'colors') {
+      html[data-theme='#{$themeName}'] {
+        @content ($color, $colorType, $themeName);
+      }
+    }
+  }
+}
+
+@mixin connectThemeFontSizes($themes) {
+  @each $themeName, $theme in $themes {
+    @each $fontSizeType, $fontSize in map-get($theme, 'fontSizes') {
+      html[data-theme='#{$themeName}'] {
+        @content ($fontSize, $fontSizeType, $themeName);
+      }
+    }
+  }
+}
+
+@mixin connectThemeFontWeights($themes) {
+  @each $themeName, $theme in $themes {
+    @each $fontWeightType, $fontWeight in map-get($theme, 'fontWeights') {
+      html[data-theme='#{$themeName}'] {
+        @content ($fontWeight, $fontWeightType, $themeName);
+      }
+    }
+  }
+}

@@ -1,0 +1,212 @@
+@import './_functions.scss';
+@import 'themes/_theme.scss';
+@import 'mixins/_media.scss';
+@import 'mixins/_theme.scss';
+
+@include connectThemes($themes) using ($theme, $themeName) {
+  code {
+    background-color: #{map-get($theme, 'colors', 'bg-secondary')} !important;
+    color: #{map-get($theme, 'colors', 'text-highlight')};
+    padding: 2px 8px;
+    border-radius: 8px;
+  }
+
+  p {
+    code {
+      background-color: #{map-get($theme, 'colors', 'bg-secondary')} !important;
+      padding: 2px 8px;
+      border-radius: 8px;
+    }
+
+    margin-bottom: 16px;
+  }
+
+  pre {
+    padding: 12px 16px;
+    margin: 8px 4px;
+    border-radius: 16px;
+
+    border: 4px solid #{map-get($theme, 'colors', 'border-secondary')};
+    background-color: #{map-get($theme, 'colors', 'bg-secondary')} !important;
+
+    text-wrap: wrap;
+  }
+
+  ul {
+    padding-top: 8px;
+    padding-left: $padding-base;
+    list-style-type: disc;
+
+    ::marker {
+      color: #{map-get($theme, 'colors', 'text-primary')};
+    }
+
+    > li {
+      margin-bottom: 12px;
+      padding-left: 0;
+      color: #{map-get($theme, 'colors', 'text-secondary')};
+    }
+
+    @include mobile {
+      padding-top: 4px;
+
+      > li {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  b {
+    display: flex;
+    margin-top: 16px;
+    font-size: 1.1rem;
+  }
+
+  ol {
+    --size: 20px;
+    --padding: 10px;
+
+    @include mobile {
+      --size: 10px;
+      --padding: 4px;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+    counter-reset: item;
+
+    list-style: none;
+    padding-left: calc(var(--size) + var(--padding));
+
+    > li {
+      color: #{map-get($theme, 'colors', 'text-secondary')};
+      position: relative;
+      counter-increment: item;
+      padding: $padding-base 0;
+
+      font-weight: 400;
+      @include mobile {
+        padding: calc($padding-base / 2) 0;
+      }
+    }
+
+    > li:not(:last-child):after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: calc(-1 * var(--size) - var(--padding));
+      width: calc(100% + var(--size) + var(--padding));
+
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-bottom-color: #{map-get($theme, 'colors', 'border-secondary')};
+    }
+
+    > li:before {
+      display: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #{map-get($theme, 'colors', 'text-secondary')};
+  }
+
+  a:not([href]) {
+    &,
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  hr {
+    background-color: #{map-get($theme, 'colors', 'border-secondary')} !important;
+    margin: 16px 0 !important;
+    margin-top: 32px;
+
+    height: 4px;
+    background-color: #ccc;
+    border: none;
+
+    @include mobile {
+      margin: 8px 0;
+    }
+  }
+
+  details {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 8px;
+
+    color: #{map-get($theme, 'colors', 'text-secondary')};
+  }
+
+  details[open] {
+    border: 2px solid #{map-get($theme, 'colors', 'text-highlight')};
+    box-shadow: 0px 0px 8px #{map-get($theme, 'colors', 'text-highlight')};
+  }
+
+  img {
+    margin: 8px auto;
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #{map-get($theme, 'colors', 'border-secondary')};
+  }
+
+  a {
+    color: #{map-get($theme, 'colors', 'text-primary')};
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: #{map-get($theme, 'colors', 'text-primary')};
+  }
+
+  a:not([href]) {
+    &,
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  blockquote {
+    background: #{map-get($theme, 'colors', 'border-secondary')};
+    border-left: 4px solid #{map-get($theme, 'colors', 'border-primary')};
+    margin: 2px 4px;
+    padding: 2px 16px;
+
+    margin-top: 32px;
+  }
+  blockquote:before {
+    color: #{map-get($theme, 'colors', 'text-secondary')};
+    font-size: 0.5rem;
+    margin-right: 8px;
+  }
+  blockquote p {
+    display: inline;
+  }
+}

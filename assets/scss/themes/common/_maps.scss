@@ -1,0 +1,12 @@
+@import './_variables.scss';
+
+$common-colors: (
+  white: $color-white,
+  black: $color-black,
+  shadow: $color-shadow,
+  success: $color-success,
+  success-200: $color-success-200,
+  error: $color-error,
+  error-200: $color-error-200,
+  inactive: $color-inactive
+);

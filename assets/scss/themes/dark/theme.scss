@@ -1,0 +1,10 @@
+@import './maps.scss';
+
+$theme: (
+  colors: $colors,
+  font-sizes: $font-sizes,
+  font-weights: $font-weights,
+  line-heights: $line-heights,
+  font-families: $font-families,
+  box-shadows: $box-shadows
+);

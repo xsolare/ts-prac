@@ -1,0 +1,51 @@
+@import './_variables.scss';
+@import '../common/_maps.scss';
+@import '../../_functions.scss';
+
+//* ---- colors ------------------------------------------------------------------------------ *//
+$base-colors: (
+  primary: $base-color-primary,
+  secondary: $base-color-secondary,
+  bg-primary: $base-color-bg-primary,
+  bg-secondary: $base-color-bg-secondary,
+  bg-side-panel: $base-color-bg-side-panel,
+  text-primary: $base-color-text-primary,
+  text-secondary: $base-color-text-secondary,
+  text-highlight: $base-color-text-highlight,
+  border-primary: $base-color-border-primary,
+  border-secondary: $base-color-border-secondary
+);
+$colors: map-collect($base-colors, $common-colors);
+
+//* ---- fonts ------------------------------------------------------------------------------ *//
+$base-font-sizes: (
+  small: $base-font-size-small,
+  base: $base-font-size-base,
+  large: $base-font-size-large
+);
+$font-sizes: map-collect($base-font-sizes);
+
+//* ---- weights ---------------------------------------------------------------------------- *//
+$font-weights: (
+  regular: $regular,
+  medium: $regular,
+  bold: $bold,
+  bolder: $bolder
+);
+
+//* ---- line heights ----------------------------------------------------------------------- *//
+$line-heights: (
+  title-1: $line-height-title-1
+);
+
+//* ---- families --------------------------------------------------------------------------- *//
+$font-families: (
+  base-font-family: $base-font-family
+);
+
+//* ---- box shadows ------------------------------------------------------------------------ *//
+$base-box-shadows: (
+  base-box-shadow-8: $base-box-shadow-8
+);
+
+$box-shadows: map-collect($base-box-shadows);

@@ -16,8 +16,6 @@ type MyPick ...
 
 <details><summary>Реализация</summary>
 
-<br />
-
 > 1 native ts
 
 ```ts
@@ -32,9 +30,7 @@ type Pick<T, K extends keyof T> = {
 
 </details>
 
-<br />
 <hr />
-<br />
 
 ### Exlude
 
@@ -47,8 +43,6 @@ type MyExcludedType = MyExclude<SomeType, boolean>; // Исключает boolea
 
 <details><summary>Реализация</summary>
 
-<br />
-
 > 1 native ts
 
 ```ts
@@ -59,9 +53,7 @@ type MyExclude<T, U> = T extends U ? never : T;
 
 </details>
 
-<br />
 <hr />
-<br />
 
 ### Omit
 
@@ -81,8 +73,6 @@ type MyOmit ...
 
 <details><summary>Реализация</summary>
 
-<br />
-
 > 1 native ts
 
 ```ts
@@ -94,8 +84,6 @@ type MyOmit<T, K extends keyof T> = {
 - `type MyOmit<T, K extends keyof T>`: Здесь мы объявляем обобщенный тип `MyOmit`, который принимает два параметра: `T` и `K`. `T` представляет исходный тип, из которого мы будем исключать свойства, а `K` представляет тип ключей, которые мы хотим исключить.
 
 - `[key in keyof T as key extends K ? never : key]: T[K]`: Это объявление нового типа, который будет содержать исключенные свойства. Здесь мы используем синтаксис `key in keyof T` для перебора всех ключей исходного типа `T`. Затем мы используем условное выражение `key extends K ? never : key`, чтобы определить, должны ли мы исключить текущий ключ `key`. Если ключ `key` является подтипом `K`, то мы используем тип `never`, чтобы исключить его из нового типа. В противном случае, мы оставляем ключ без изменений. Значение типа для каждого ключа `key` в новом типе будет `T[K]`, что означает, что свойство с ключом `key` будет иметь тип значения, соответствующего ключу `K` в исходном типе `T`.
-
-<br />
 
 > 2 with Pick and Exclude
 
@@ -111,8 +99,6 @@ type MyOmit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
 Наконец, `Pick<T, Exclude<keyof T, K>>` используется для создания нового типа, который содержит только те свойства из типа `T`, которые не были исключены с помощью типа `K`. То есть, мы выбираем только те свойства из исходного типа `T`, которые не указаны в типе `K`.
 
-<br />
-
 > 3 with only Exclude
 
 ```ts
@@ -123,9 +109,7 @@ type MyOmit<T, K extends keyof T> = {
 
 </details>
 
-<br />
 <hr />
-<br />
 
 ### KebabToPascalCase
 
@@ -136,8 +120,6 @@ type PascalCaseString = KebabToPascalCase<KebabCaseString>;
 ```
 
 <details><summary>Реализация</summary>
-
-<br />
 
 > 1
 
@@ -157,9 +139,7 @@ type KebabToPascalCase<T> = T extends `${infer A}-${infer B}${infer C}`
 
 </details>
 
-<br />
 <hr />
-<br />
 
 ### KebabToCamel
 
@@ -170,8 +150,6 @@ type CamelCase = KebabToCamel<KebabCase>;
 ```
 
 <details><summary>Реализация</summary>
-
-<br />
 
 > 1
 
@@ -195,9 +173,7 @@ type KebabToCamel<T> = T extends `${infer A}-${infer B}${infer C}`
 
 </details>
 
-<br />
 <hr />
-<br />
 
 ### ScreamSnakeCaseString
 
@@ -208,8 +184,6 @@ type ScreamSnakeCase = ScreamSnakeCaseString<MyString>;
 ```
 
 <details><summary>Реализация</summary>
-
-<br />
 
 > 1
 
@@ -229,6 +203,4 @@ type ScreamSnakeCaseString<T extends string> = T extends `${infer A}_${infer B}`
 
 </details>
 
-<br />
 <hr />
-<br />

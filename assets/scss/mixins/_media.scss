@@ -1,0 +1,25 @@
+@import '../_variables.scss';
+
+@mixin mobile {
+  @media screen and (min-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media screen and (min-width: #{$small-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin medium-desktop {
+  @media screen and (min-width: #{$medium-desktop-width}) {
+    @content;
+  }
+}
