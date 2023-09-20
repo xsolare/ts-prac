@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "nc-guide",
+  "name": "xsolare-ts",
   "private": true,
   "version": "1.0.0",
   "engines": {
@@ -18,7 +18,7 @@
     "lint:ts": "eslint \"./**/*.{ts,tsx,vue}\" --fix",
     "lint:style": "stylelint \"./**/*.{css,sass,scss,vue}\" --fix --allow-empty-input --customSyntax postcss-scss",
     "format": "prettier -w \"./**/*.{ts,tsx,json,scss,md,vue}\"",
-    "postinstall": "cd .. && husky install .husky"
+    "postinstall": "husky install .husky"
   },
   "dependencies": {
     "@mdi/font": "^7.2.96",
