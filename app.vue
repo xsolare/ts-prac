@@ -44,6 +44,7 @@ useHead({
   }
 
   .v-application {
+    padding: 10px;
     padding-top: 64px;
     min-height: 100vh;
 

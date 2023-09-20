@@ -18,33 +18,36 @@
 </template>
 
 <style lang="scss">
-.wrapper {
-  max-width: 920px;
-  margin: 0 auto;
+@include connectThemes($themes) using ($theme, $themeName) {
+  .wrapper {
+    max-width: 920px;
+    margin: 0 auto;
 
-  height: 100%;
-  padding: 10px;
+    height: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  gap: 16px;
-
-  > div {
-    max-width: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  &-menu {
+  .intro {
+    color: #{map-get($theme, 'colors', 'text-primary')};
+
     display: flex;
-    gap: 6px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    > div {
+      max-width: 460px;
+    }
+
+    &-menu {
+      display: flex;
+      gap: 6px;
+    }
   }
 }
 </style>

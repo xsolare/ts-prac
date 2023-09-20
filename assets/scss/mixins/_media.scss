@@ -12,14 +12,8 @@
   }
 }
 
-@mixin small-desktop {
-  @media screen and (min-width: #{$small-desktop-width}) {
-    @content;
-  }
-}
-
-@mixin medium-desktop {
-  @media screen and (min-width: #{$medium-desktop-width}) {
+@mixin desktop {
+  @media screen and (min-width: #{$desktop-width}) {
     @content;
   }
 }

@@ -1,60 +1,11 @@
-//* ---- Composition ----------------------------------------------------------------------- *//
-$button-height: 56px;
-$button-y-margin: 10px;
-
-$padding-base: 16px;
-$max-screen-width: 430px;
-
 //* ---- Media ----------------------------------------------------------------------------- *//
 $mobile-width: 320px;
 $tablet-width: 768px;
-$small-desktop-width: 1024px;
-$medium-desktop-width: 1280px;
+$desktop-width: 1280px;
 
 $padding-base: 16px;
-$webview-max-screen-width: 430px;
-
-//* ---- Composition ----------------------------------------------------------------------- *//
-$button-height: 56px;
-$button-y-margin: 10px;
-
-//* ---- Light theme ----------------------------------------------------------------------- *//
-$bg-primary: #ffffff !default;
-$bg-secondary: #333 !default;
-
-$color-primary: #ffb800 !default;
-$color-secondary: #eaeff8 !default;
-
-$text-primary: #242555 !default;
-$text-secondary: #242555cc !default;
-
-$border-primary: #878787 !default;
-$border-secondary: #eaeff8 !default;
-
-//* ---- Dark theme ------------------------------------------------------------------------ *//
-$bg-primary-dark: #161718 !default;
-$bg-secondary-dark: #141414 !default;
-
-$color-primary-dark: #bb86fc !default;
-$color-secondary-dark: #cea6ff !default;
-
-$text-primary-dark: #9192c5 !default;
-$text-secondary-dark: #6b6ba2 !default;
-
-$border-primary-dark: #625e7e !default;
-$border-secondary-dark: #373648 !default;
-
-//* ---- Common colors --------------------------------------------------------------------- *//
-$color-white: #fff;
-$color-black: #000;
-$color-shadow: rgba(0, 0, 0, 0.1);
-$color-success: #5d9b4d;
-$color-success-200: #3d6e30;
-$color-error: #ff5c5c;
-$color-error-200: #a73939;
-$color-inactive: #9fa6b4;
 
 //* ---- Font sizes ------------------------------------------------------------------------ *//
-$font-size-small: 14px !default;
-$font-size-base: 17px !default;
-$font-size-large: 18px !default;
+$font-size-small: 13px !default;
+$font-size-base: 16px !default;
+$font-size-large: 17px !default;

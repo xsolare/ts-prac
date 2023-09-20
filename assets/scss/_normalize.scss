@@ -16,6 +16,8 @@
       background-color: #{map-get($theme, 'colors', 'bg-secondary')} !important;
       padding: 2px 8px;
       border-radius: 8px;
+      letter-spacing: 0;
+      overflow-x: auto;
     }
 
     margin-bottom: 16px;
@@ -30,6 +32,7 @@
     background-color: #{map-get($theme, 'colors', 'bg-secondary')} !important;
 
     text-wrap: wrap;
+    display: flex;
   }
 
   ul {
