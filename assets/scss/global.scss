@@ -1,0 +1,173 @@
+@import './settings.scss';
+@import './media';
+@import './normalize.scss';
+
+//* ---- Light theme ----------------------------------------------------------------------- *//
+:root {
+  --bg-primary: #{$bg-primary};
+  --bg-secondary: #{$bg-secondary};
+
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+
+  --border-primary: #{$border-primary};
+  --border-secondary: #{$border-secondary};
+
+  --bg-side-panel: #ececec;
+}
+
+//* ---- Dark theme ------------------------------------------------------------------------ *//
+.dark {
+  --bg-primary: #{$bg-primary-dark};
+  --bg-secondary: #{$bg-secondary-dark};
+
+  --color-primary: #{$color-primary-dark};
+  --color-secondary: #{$color-secondary-dark};
+
+  --text-primary: #{$text-primary-dark};
+  --text-secondary: #{$text-secondary-dark};
+
+  --border-primary: #{$border-primary-dark};
+  --border-secondary: #{$border-secondary-dark};
+
+  --bg-side-panel: #0d1117;
+}
+
+.v-progress-linear__indeterminate {
+  color: var(--color-primary);
+}
+
+html {
+  font-size: $font-size-base;
+  font-family: $font-family-default;
+
+  @include xs {
+    font-size: $font-size-small;
+  }
+
+  line-height: 34px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 100%;
+    background-color: var(--bg-secondary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #757575;
+    box-shadow: inset 0 0 5px #a8a8a8;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
+#__nuxt,
+#__layout {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
+
+a {
+  color: var(--text-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--text-primary);
+}
+
+a:not([href]) {
+  &,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@font-face {
+  font-family: Gerbera;
+  src:
+    url(/fonts/Gerbera-Light.woff2) format('woff2'),
+    url(/fonts/Gerbera-Light.woff) format('woff'),
+    url(/fonts/Gerbera-Light.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+@font-face {
+  font-family: Gerbera;
+  src:
+    url(/fonts/Gerbera.woff2) format('woff2'),
+    url(/fonts/Gerbera.woff) format('woff'),
+    url(/fonts/Gerbera.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+@font-face {
+  font-family: Gerbera;
+  src:
+    url(/fonts/Gerbera-Bold.woff2) format('woff2'),
+    url(/fonts/Gerbera-Bold.woff) format('woff'),
+    url(/fonts/Gerbera-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+@font-face {
+  font-family: Gerbera;
+  src:
+    url(/fonts/Gerbera-Medium.woff2) format('woff2'),
+    url(/fonts/Gerbera-Medium.woff) format('woff'),
+    url(/fonts/Gerbera-Medium.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+@font-face {
+  font-family: Gerbera;
+  src:
+    url(/fonts/Gerbera-Black.woff2) format('woff2'),
+    url(/fonts/Gerbera-Black.woff) format('woff'),
+    url(/fonts/Gerbera-Black.ttf) format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}

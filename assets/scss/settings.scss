@@ -1,0 +1,14 @@
+/*
+ * src/assets/scss/settings.scss
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+@use 'vuetify/settings' with (
+  $body-font-family: (
+    'Gerbera',
+    'Open Sans',
+    Roboto,
+    -apple-system,
+    sans-serif
+  )
+);
