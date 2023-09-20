@@ -3,11 +3,6 @@
   "name": "xsolare-ts",
   "private": true,
   "version": "1.0.0",
-  "engines": {
-    "node": ">=20.x",
-    "pnpm": ">=8.x",
-    "bun": ">=8.x"
-  },
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
@@ -49,7 +44,7 @@
   },
   "lint-staged": {
     "*.{js,ts,vue}": "eslint --fix",
-    "*.{css,sass,scss,vue,htm,html}": "stylelint --fix",
+    "*.{css,sass,scss,vue,htm,html}": "stylelint --fix --allow-empty-input",
     "*": "prettier -w -u"
   }
 }
