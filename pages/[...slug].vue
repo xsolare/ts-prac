@@ -2,32 +2,36 @@
 
 <template>
   <NuxtLayout>
-    <div class="wrapper">
-      <ContentDoc>
-        <template #not-found>
-          <div class="intro">
-            <div>TS Penetration special for you</div>
-            <div class="intro-menu">
-              <v-btn variant="tonal" @click="navigateTo('/prac')">ju-TS-ang</v-btn>
-            </div>
-          </div>
-        </template>
-      </ContentDoc>
+    <div>
+      <div class="content">
+        <div class="content-wrapper">
+          <ContentDoc>
+            <template #not-found>
+              <div class="intro">
+                <div>Practices Penetration special for you</div>
+                <div class="intro-menu">
+                  <v-btn variant="tonal" @click="navigateTo('/typescript')">typescript</v-btn>
+                </div>
+              </div>
+            </template>
+          </ContentDoc>
+        </div>
+      </div>
     </div>
   </NuxtLayout>
 </template>
 
 <style lang="scss">
 @include connectThemes($themes) using ($theme, $themeName) {
-  .wrapper {
+  .content {
+    padding: 6px;
     max-width: 920px;
     margin: 0 auto;
 
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    &-wrapper {
+      overflow-wrap: break-word;
+      width: 100%;
+    }
   }
 
   .intro {

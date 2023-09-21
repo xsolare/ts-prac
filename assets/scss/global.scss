@@ -10,6 +10,18 @@
 
   --text-primary: #{map-get($theme, 'colors', 'text-primary')} !important;
   --text-primary: #{map-get($theme, 'colors', 'text-secondary')} !important;
+
+  @include mobile() {
+    font-size: #{map-get($theme, 'font-sizes', 'font-size-small')} !important;
+  }
+  @include tablet() {
+    font-size: #{map-get($theme, 'font-sizes', 'font-size-base')} !important;
+  }
+  @include desktop() {
+    font-size: #{map-get($theme, 'font-sizes', 'font-size-large')} !important;
+  }
+
+  background-color: #{map-get($theme, 'colors', 'bg-primary')} !important;
 }
 
 html {
@@ -24,16 +36,6 @@ html {
   height: 100%;
   border: none;
   line-height: 30px;
-
-  @include mobile() {
-    font-size: #{$font-size-small};
-  }
-  @include tablet() {
-    font-size: #{$font-size-base};
-  }
-  @include desktop() {
-    font-size: #{$font-size-large};
-  }
 }
 
 body {
@@ -47,6 +49,7 @@ body {
 
   overscroll-behavior: none;
   box-sizing: border-box;
+
   *,
   *::before,
   *::after {

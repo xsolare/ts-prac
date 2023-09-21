@@ -44,45 +44,9 @@ useHead({
   }
 
   .v-application {
-    padding: 10px;
     padding-top: 64px;
     min-height: 100vh;
-
     background-color: #{map-get($theme, 'colors', 'bg-primary')};
-
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 100%;
-      background-color: #dbdbdb;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      background-color: #a9a9bb;
-      box-shadow: inset 0 0 5px #a9a9bb;
-    }
-
-    ::-webkit-scrollbar-track {
-      background-color: transparent;
-    }
-  }
-
-  .v-navigation-drawer {
-    ::-webkit-scrollbar {
-      width: 4px;
-      height: 100%;
-      background-color: #{map-get($theme, 'colors', 'bg-primary')};
-    }
-
-    ::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      background-color: #625e7e;
-      box-shadow: inset 0 0 5px #625e7e;
-    }
-
-    ::-webkit-scrollbar-track {
-      background-color: transparent;
-    }
   }
 }
 </style>

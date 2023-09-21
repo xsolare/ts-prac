@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  name: 'xSolare ts',
+  name: 'xSolare',
   author: {
     name: '-'
   }

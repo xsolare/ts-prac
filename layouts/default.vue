@@ -14,12 +14,12 @@ const loading = ref<boolean>(false);
 
 const items = ref<IValue[]>([
   {
-    title: 'TS-prac',
-    value: '/prac'
+    title: 'Typescript',
+    value: '/typescript'
   }
 ]);
 
-const icons = [{ icon: 'mdi-github', link: 'https://github.com/xsolare' }];
+const icons = [{ icon: 'mdi-github', link: 'https://github.com/xsolare/ts-prac' }];
 
 nuxtApp.hook('page:start', () => {
   loading.value = true;
@@ -32,7 +32,7 @@ nuxtApp.hook('page:finish', () => {
 <template>
   <v-app-bar color="primary" prominent>
     <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer" />
-    <v-toolbar-title> xSolare ts</v-toolbar-title>
+    <v-toolbar-title> xSolare </v-toolbar-title>
     <v-spacer />
 
     <v-btn variant="text" icon="mdi-theme-light-dark" @click="switchTheme" />
