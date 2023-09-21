@@ -2,7 +2,7 @@
 
 <template>
   <NuxtLayout>
-    <div>
+    <div class="page">
       <div class="content">
         <div class="content-wrapper">
           <ContentDoc>
@@ -23,6 +23,10 @@
 
 <style lang="scss">
 @include connectThemes($themes) using ($theme, $themeName) {
+  .page {
+    min-height: calc(100vh - 170px);
+  }
+
   .content {
     padding: 6px;
     max-width: 920px;
@@ -37,6 +41,7 @@
   .intro {
     color: #{map-get($theme, 'colors', 'text-primary')};
 
+    margin-top: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;

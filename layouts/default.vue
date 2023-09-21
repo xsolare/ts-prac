@@ -38,7 +38,7 @@ nuxtApp.hook('page:finish', () => {
     <v-btn variant="text" icon="mdi-theme-light-dark" @click="switchTheme" />
   </v-app-bar>
 
-  <v-navigation-drawer v-model="drawer" rail rail-width="450" location="left">
+  <v-navigation-drawer v-model="drawer" rail rail-width="250" location="left">
     <v-list>
       <v-list-item
         v-for="(v, i) in items"
