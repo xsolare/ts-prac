@@ -14,8 +14,12 @@ const loading = ref<boolean>(false);
 
 const items = ref<IValue[]>([
   {
-    title: 'Typescript',
-    value: '/typescript'
+    title: 'Typescript Task',
+    value: '/typescript-task'
+  },
+  {
+    title: 'Typescript Quiz',
+    value: '/typescript-quiz'
   }
 ]);
 

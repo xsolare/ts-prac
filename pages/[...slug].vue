@@ -10,7 +10,12 @@
               <div class="intro">
                 <div>Practices Penetration special for you</div>
                 <div class="intro-menu">
-                  <v-btn variant="tonal" @click="navigateTo('/typescript')">typescript</v-btn>
+                  <v-btn variant="tonal" @click="navigateTo('/typescript-task')">
+                    typescript task
+                  </v-btn>
+                  <v-btn variant="tonal" @click="navigateTo('/typescript-quiz')">
+                    typescript quiz
+                  </v-btn>
                 </div>
               </div>
             </template>
